@@ -8,7 +8,6 @@ body {
 </style>
 <script>
 function submitForm() {
-	alert("ciao");
 	document.forms["userData"].method = "POST";
 	document.forms["userData"].action = "welcome.html";
 	document.forms["userData"].submit();
