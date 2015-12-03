@@ -13,7 +13,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+        <spring.version>3.0.5.RELEASE</spring.version>
         <servlet.version>2.5</servlet.version>
         <jsp.version>2.1</jsp.version>
         <jstl.version>1.2</jstl.version>
@@ -32,22 +32,59 @@
             <!--  Spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${org.springframework.version}</version>
-                <exclusions>
-                    <!-- Exclude Commons Logging in favor of SLF4j -->
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                </exclusions>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
-                <version>${org.springframework.version}</version>
+                <version>${spring.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <!-- Servlet -->
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -67,11 +104,12 @@
                 <version>${jstl.version}</version>
             </dependency>
 
+
             <!-- Hibernate -->
             <dependency>
                 <groupId>org.hibernate.javax.persistence</groupId>
                 <artifactId>hibernate-jpa-2.0-api</artifactId>
-                <version>1.0.1.Final</version>
+                <version>1.0.1.Final-redhat-3</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>

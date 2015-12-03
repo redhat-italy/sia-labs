@@ -1,12 +1,17 @@
 package it.redhat.sia.labs.model.entity;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 /**
  * Created by foogaro on 03/12/15.
  */
 @Entity
 @Table(name = "UTENTE", schema = "SIALABS", catalog = "")
+@NamedQueries({
+        @NamedQuery(name = "findBySesso", query = "Select u from UtenteEntity u where sesso = :sesso")
+})
 public class UtenteEntity {
     private int id;
     private String nome;
@@ -14,6 +19,7 @@ public class UtenteEntity {
     private String sesso;
 
     @Id
+    @GeneratedValue
     @Column(name = "id")
     public int getId() {
         return id;
@@ -75,5 +81,16 @@ public class UtenteEntity {
         result = 31 * result + (cognome != null ? cognome.hashCode() : 0);
         result = 31 * result + (sesso != null ? sesso.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("UtenteEntity{");
+        sb.append("id=").append(id);
+        sb.append(", nome='").append(nome).append('\'');
+        sb.append(", cognome='").append(cognome).append('\'');
+        sb.append(", sesso='").append(sesso).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }
