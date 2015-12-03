@@ -1,8 +1,22 @@
 <html>
+<head>
+    <title></title>
+    <script>
+        function submitForm() {
+            document.forms["userData"].method = "POST";
+            document.forms["userData"].action = "welcome.html";
+            document.forms["userData"].submit();
+        }
+    </script>
+</head>
 <body>
-<h2>Benvenuti in SIA da Massimo e Giampietro!</h2>
-<a href="http://pagina1.html">pagina Gianpietro</a>
-<a href="http://pagina2.html">pagina Massimo 2</a>
-<a href="http://pagina3.html">pagina vuota</a>
+<br>
+<div style="text-align:center">
+    <form id="userData">
+        Nome <input type="text" name="firstName" /><br>
+        Cognome <input type="text" name="lastName" /><br>
+        <input type="button" onclick="javascript:submitForm();" value="invia" name="invia" label="invia" />
+    </form>
+</div>
 </body>
 </html>
