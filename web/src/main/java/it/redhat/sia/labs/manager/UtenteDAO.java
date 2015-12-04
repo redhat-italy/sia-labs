@@ -2,14 +2,14 @@ package it.redhat.sia.labs.manager;
 
 import it.redhat.sia.labs.model.entity.UtenteEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.ejb.TransactionManagement;
-import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Component
-@TransactionManagement(TransactionManagementType.CONTAINER)
+@Transactional(propagation = Propagation.REQUIRED)
 public class UtenteDAO extends AbstractDAO<UtenteEntity> {
 
     //@PersistenceContext(name = "sialabs-pu", unitName = "sialabs-pu")

@@ -2,7 +2,7 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
 
-    <persistence-unit name="sialabs-pu" transaction-type="JTA">
+    <persistence-unit name="sialabs-pu" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>it.redhat.sia.labs.model.entity.UtenteEntity</class>
         <properties>
