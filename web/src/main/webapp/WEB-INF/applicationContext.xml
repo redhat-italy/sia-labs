@@ -52,13 +52,13 @@
 
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-          p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://192.168.59.103:3306/SIALABS"
-    p:username="root"
-    p:password="root"/>
+          p:driverClassName="org.postgresql.Driver" p:url="jdbc:postgresql://localhost:5432/sialabs"
+    p:username="postgres"
+    p:password="psql"/>
 
     <bean id="jpaAdapter"
           class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
-          p:database="MYSQL"
+          p:database="POSTGRESQL"
           p:showSql="true"/>
 
 </beans>

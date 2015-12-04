@@ -8,9 +8,9 @@ import java.io.Serializable;
  * Created by foogaro on 03/12/15.
  */
 @Entity
-@Table(name = "UTENTE", schema = "SIALABS", catalog = "")
+@Table(name = "UTENTE", schema = "public", catalog = "")
 @NamedQueries({
-        @NamedQuery(name = "findBySesso", query = "Select u from UtenteEntity u where sesso = :sesso")
+        @NamedQuery(name = "findBySesso", query = "Select u from UtenteEntity u where u.sesso = :sesso")
 })
 public class UtenteEntity {
     private int id;
